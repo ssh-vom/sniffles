@@ -1,0 +1,5 @@
+/Users/shivom/projects/sniffles/CMakeFiles/MyApp.dir
+/Users/shivom/projects/sniffles/CMakeFiles/edit_cache.dir
+/Users/shivom/projects/sniffles/CMakeFiles/rebuild_cache.dir
+/Users/shivom/projects/sniffles/CMakeFiles/MyApp_autogen_timestamp_deps.dir
+/Users/shivom/projects/sniffles/CMakeFiles/MyApp_autogen.dir
