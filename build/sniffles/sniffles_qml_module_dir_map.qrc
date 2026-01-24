@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/sniffles">/Users/shivom/projects/sniffles/build/sniffles</file>
+
+  </qresource>
+</RCC>

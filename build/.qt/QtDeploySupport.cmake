@@ -60,6 +60,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 set(__qt_deploy_support_files
     "/Users/shivom/projects/sniffles/build/.qt/QtDeployTargets.cmake"
     "/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
+    "/opt/homebrew/Cellar/qtdeclarative/6.9.3/lib/cmake/Qt6Qml/Qt6QmlDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)
     include("${__qt_deploy_support_file}")

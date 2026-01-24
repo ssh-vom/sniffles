@@ -117,74 +117,315 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MyApp
+# Target rules for targets named sniffles
 
 # Build rule for target.
-MyApp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyApp
-.PHONY : MyApp
+sniffles: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles
+.PHONY : sniffles
 
 # fast build rule for target.
-MyApp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/build
-.PHONY : MyApp/fast
+sniffles/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build
+.PHONY : sniffles/fast
 
 #=============================================================================
-# Target rules for targets named MyApp_autogen_timestamp_deps
+# Target rules for targets named sniffles_qmltyperegistration
 
 # Build rule for target.
-MyApp_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyApp_autogen_timestamp_deps
-.PHONY : MyApp_autogen_timestamp_deps
+sniffles_qmltyperegistration: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_qmltyperegistration
+.PHONY : sniffles_qmltyperegistration
 
 # fast build rule for target.
-MyApp_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp_autogen_timestamp_deps.dir/build.make CMakeFiles/MyApp_autogen_timestamp_deps.dir/build
-.PHONY : MyApp_autogen_timestamp_deps/fast
+sniffles_qmltyperegistration/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_qmltyperegistration.dir/build.make CMakeFiles/sniffles_qmltyperegistration.dir/build
+.PHONY : sniffles_qmltyperegistration/fast
 
 #=============================================================================
-# Target rules for targets named MyApp_autogen
+# Target rules for targets named all_qmltyperegistrations
 
 # Build rule for target.
-MyApp_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyApp_autogen
-.PHONY : MyApp_autogen
+all_qmltyperegistrations: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmltyperegistrations
+.PHONY : all_qmltyperegistrations
 
 # fast build rule for target.
-MyApp_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp_autogen.dir/build.make CMakeFiles/MyApp_autogen.dir/build
-.PHONY : MyApp_autogen/fast
+all_qmltyperegistrations/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmltyperegistrations.dir/build.make CMakeFiles/all_qmltyperegistrations.dir/build
+.PHONY : all_qmltyperegistrations/fast
 
-MyApp_autogen/mocs_compilation.o: MyApp_autogen/mocs_compilation.cpp.o
-.PHONY : MyApp_autogen/mocs_compilation.o
+#=============================================================================
+# Target rules for targets named sniffles_qmllint
+
+# Build rule for target.
+sniffles_qmllint: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_qmllint
+.PHONY : sniffles_qmllint
+
+# fast build rule for target.
+sniffles_qmllint/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_qmllint.dir/build.make CMakeFiles/sniffles_qmllint.dir/build
+.PHONY : sniffles_qmllint/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_qmllint_json
+
+# Build rule for target.
+sniffles_qmllint_json: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_qmllint_json
+.PHONY : sniffles_qmllint_json
+
+# fast build rule for target.
+sniffles_qmllint_json/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_qmllint_json.dir/build.make CMakeFiles/sniffles_qmllint_json.dir/build
+.PHONY : sniffles_qmllint_json/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_qmllint_module
+
+# Build rule for target.
+sniffles_qmllint_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_qmllint_module
+.PHONY : sniffles_qmllint_module
+
+# fast build rule for target.
+sniffles_qmllint_module/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_qmllint_module.dir/build.make CMakeFiles/sniffles_qmllint_module.dir/build
+.PHONY : sniffles_qmllint_module/fast
+
+#=============================================================================
+# Target rules for targets named all_qmllint
+
+# Build rule for target.
+all_qmllint: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint
+.PHONY : all_qmllint
+
+# fast build rule for target.
+all_qmllint/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint.dir/build.make CMakeFiles/all_qmllint.dir/build
+.PHONY : all_qmllint/fast
+
+#=============================================================================
+# Target rules for targets named all_qmllint_json
+
+# Build rule for target.
+all_qmllint_json: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint_json
+.PHONY : all_qmllint_json
+
+# fast build rule for target.
+all_qmllint_json/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint_json.dir/build.make CMakeFiles/all_qmllint_json.dir/build
+.PHONY : all_qmllint_json/fast
+
+#=============================================================================
+# Target rules for targets named all_qmllint_module
+
+# Build rule for target.
+all_qmllint_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint_module
+.PHONY : all_qmllint_module
+
+# fast build rule for target.
+all_qmllint_module/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint_module.dir/build.make CMakeFiles/all_qmllint_module.dir/build
+.PHONY : all_qmllint_module/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_copy_qml
+
+# Build rule for target.
+sniffles_copy_qml: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_copy_qml
+.PHONY : sniffles_copy_qml
+
+# fast build rule for target.
+sniffles_copy_qml/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_copy_qml.dir/build.make CMakeFiles/sniffles_copy_qml.dir/build
+.PHONY : sniffles_copy_qml/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_copy_res
+
+# Build rule for target.
+sniffles_copy_res: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_copy_res
+.PHONY : sniffles_copy_res
+
+# fast build rule for target.
+sniffles_copy_res/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_copy_res.dir/build.make CMakeFiles/sniffles_copy_res.dir/build
+.PHONY : sniffles_copy_res/fast
+
+#=============================================================================
+# Target rules for targets named module_sniffles_aotstats_target
+
+# Build rule for target.
+module_sniffles_aotstats_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 module_sniffles_aotstats_target
+.PHONY : module_sniffles_aotstats_target
+
+# fast build rule for target.
+module_sniffles_aotstats_target/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/module_sniffles_aotstats_target.dir/build.make CMakeFiles/module_sniffles_aotstats_target.dir/build
+.PHONY : module_sniffles_aotstats_target/fast
+
+#=============================================================================
+# Target rules for targets named all_aotstats
+
+# Build rule for target.
+all_aotstats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_aotstats
+.PHONY : all_aotstats
+
+# fast build rule for target.
+all_aotstats/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_aotstats.dir/build.make CMakeFiles/all_aotstats.dir/build
+.PHONY : all_aotstats/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_qmlimportscan
+
+# Build rule for target.
+sniffles_qmlimportscan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_qmlimportscan
+.PHONY : sniffles_qmlimportscan
+
+# fast build rule for target.
+sniffles_qmlimportscan/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_qmlimportscan.dir/build.make CMakeFiles/sniffles_qmlimportscan.dir/build
+.PHONY : sniffles_qmlimportscan/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_autogen_timestamp_deps
+
+# Build rule for target.
+sniffles_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_autogen_timestamp_deps
+.PHONY : sniffles_autogen_timestamp_deps
+
+# fast build rule for target.
+sniffles_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_autogen_timestamp_deps.dir/build.make CMakeFiles/sniffles_autogen_timestamp_deps.dir/build
+.PHONY : sniffles_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_autogen
+
+# Build rule for target.
+sniffles_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_autogen
+.PHONY : sniffles_autogen
+
+# fast build rule for target.
+sniffles_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_autogen.dir/build.make CMakeFiles/sniffles_autogen.dir/build
+.PHONY : sniffles_autogen/fast
+
+build/.qt/rcc/qrc_qmake_sniffles.o: build/.qt/rcc/qrc_qmake_sniffles.cpp.o
+.PHONY : build/.qt/rcc/qrc_qmake_sniffles.o
 
 # target to build an object file
-MyApp_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/MyApp_autogen/mocs_compilation.cpp.o
-.PHONY : MyApp_autogen/mocs_compilation.cpp.o
+build/.qt/rcc/qrc_qmake_sniffles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o
+.PHONY : build/.qt/rcc/qrc_qmake_sniffles.cpp.o
 
-MyApp_autogen/mocs_compilation.i: MyApp_autogen/mocs_compilation.cpp.i
-.PHONY : MyApp_autogen/mocs_compilation.i
+build/.qt/rcc/qrc_qmake_sniffles.i: build/.qt/rcc/qrc_qmake_sniffles.cpp.i
+.PHONY : build/.qt/rcc/qrc_qmake_sniffles.i
 
 # target to preprocess a source file
-MyApp_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/MyApp_autogen/mocs_compilation.cpp.i
-.PHONY : MyApp_autogen/mocs_compilation.cpp.i
+build/.qt/rcc/qrc_qmake_sniffles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.i
+.PHONY : build/.qt/rcc/qrc_qmake_sniffles.cpp.i
 
-MyApp_autogen/mocs_compilation.s: MyApp_autogen/mocs_compilation.cpp.s
-.PHONY : MyApp_autogen/mocs_compilation.s
+build/.qt/rcc/qrc_qmake_sniffles.s: build/.qt/rcc/qrc_qmake_sniffles.cpp.s
+.PHONY : build/.qt/rcc/qrc_qmake_sniffles.s
 
 # target to generate assembly for a file
-MyApp_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/MyApp_autogen/mocs_compilation.cpp.s
-.PHONY : MyApp_autogen/mocs_compilation.cpp.s
+build/.qt/rcc/qrc_qmake_sniffles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.s
+.PHONY : build/.qt/rcc/qrc_qmake_sniffles.cpp.s
+
+build/.qt/rcc/qrc_sniffles_raw_qml_0.o: build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o
+.PHONY : build/.qt/rcc/qrc_sniffles_raw_qml_0.o
+
+# target to build an object file
+build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o
+.PHONY : build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o
+
+build/.qt/rcc/qrc_sniffles_raw_qml_0.i: build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.i
+.PHONY : build/.qt/rcc/qrc_sniffles_raw_qml_0.i
+
+# target to preprocess a source file
+build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.i
+.PHONY : build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.i
+
+build/.qt/rcc/qrc_sniffles_raw_qml_0.s: build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.s
+.PHONY : build/.qt/rcc/qrc_sniffles_raw_qml_0.s
+
+# target to generate assembly for a file
+build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.s
+.PHONY : build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.s
+
+build/.rcc/qmlcache/sniffles_main_qml.o: build/.rcc/qmlcache/sniffles_main_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sniffles_main_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sniffles_main_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sniffles_main_qml.cpp.o
+
+build/.rcc/qmlcache/sniffles_main_qml.i: build/.rcc/qmlcache/sniffles_main_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sniffles_main_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sniffles_main_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sniffles_main_qml.cpp.i
+
+build/.rcc/qmlcache/sniffles_main_qml.s: build/.rcc/qmlcache/sniffles_main_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sniffles_main_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sniffles_main_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sniffles_main_qml.cpp.s
+
+build/.rcc/qmlcache/sniffles_qmlcache_loader.o: build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o
+.PHONY : build/.rcc/qmlcache/sniffles_qmlcache_loader.o
+
+# target to build an object file
+build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o
+.PHONY : build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o
+
+build/.rcc/qmlcache/sniffles_qmlcache_loader.i: build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.i
+.PHONY : build/.rcc/qmlcache/sniffles_qmlcache_loader.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.i
+.PHONY : build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.i
+
+build/.rcc/qmlcache/sniffles_qmlcache_loader.s: build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.s
+.PHONY : build/.rcc/qmlcache/sniffles_qmlcache_loader.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.s
+.PHONY : build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +433,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -200,8 +441,56 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+sniffles_autogen/mocs_compilation.o: sniffles_autogen/mocs_compilation.cpp.o
+.PHONY : sniffles_autogen/mocs_compilation.o
+
+# target to build an object file
+sniffles_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.o
+.PHONY : sniffles_autogen/mocs_compilation.cpp.o
+
+sniffles_autogen/mocs_compilation.i: sniffles_autogen/mocs_compilation.cpp.i
+.PHONY : sniffles_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+sniffles_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.i
+.PHONY : sniffles_autogen/mocs_compilation.cpp.i
+
+sniffles_autogen/mocs_compilation.s: sniffles_autogen/mocs_compilation.cpp.s
+.PHONY : sniffles_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+sniffles_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.s
+.PHONY : sniffles_autogen/mocs_compilation.cpp.s
+
+sniffles_qmltyperegistrations.o: sniffles_qmltyperegistrations.cpp.o
+.PHONY : sniffles_qmltyperegistrations.o
+
+# target to build an object file
+sniffles_qmltyperegistrations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o
+.PHONY : sniffles_qmltyperegistrations.cpp.o
+
+sniffles_qmltyperegistrations.i: sniffles_qmltyperegistrations.cpp.i
+.PHONY : sniffles_qmltyperegistrations.i
+
+# target to preprocess a source file
+sniffles_qmltyperegistrations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.i
+.PHONY : sniffles_qmltyperegistrations.cpp.i
+
+sniffles_qmltyperegistrations.s: sniffles_qmltyperegistrations.cpp.s
+.PHONY : sniffles_qmltyperegistrations.s
+
+# target to generate assembly for a file
+sniffles_qmltyperegistrations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.s
+.PHONY : sniffles_qmltyperegistrations.cpp.s
 
 # Help Target
 help:
@@ -211,15 +500,43 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MyApp_autogen"
-	@echo "... MyApp_autogen_timestamp_deps"
-	@echo "... MyApp"
-	@echo "... MyApp_autogen/mocs_compilation.o"
-	@echo "... MyApp_autogen/mocs_compilation.i"
-	@echo "... MyApp_autogen/mocs_compilation.s"
+	@echo "... all_aotstats"
+	@echo "... all_qmllint"
+	@echo "... all_qmllint_json"
+	@echo "... all_qmllint_module"
+	@echo "... all_qmltyperegistrations"
+	@echo "... module_sniffles_aotstats_target"
+	@echo "... sniffles_autogen"
+	@echo "... sniffles_autogen_timestamp_deps"
+	@echo "... sniffles_copy_qml"
+	@echo "... sniffles_copy_res"
+	@echo "... sniffles_qmlimportscan"
+	@echo "... sniffles_qmllint"
+	@echo "... sniffles_qmllint_json"
+	@echo "... sniffles_qmllint_module"
+	@echo "... sniffles_qmltyperegistration"
+	@echo "... sniffles"
+	@echo "... build/.qt/rcc/qrc_qmake_sniffles.o"
+	@echo "... build/.qt/rcc/qrc_qmake_sniffles.i"
+	@echo "... build/.qt/rcc/qrc_qmake_sniffles.s"
+	@echo "... build/.qt/rcc/qrc_sniffles_raw_qml_0.o"
+	@echo "... build/.qt/rcc/qrc_sniffles_raw_qml_0.i"
+	@echo "... build/.qt/rcc/qrc_sniffles_raw_qml_0.s"
+	@echo "... build/.rcc/qmlcache/sniffles_main_qml.o"
+	@echo "... build/.rcc/qmlcache/sniffles_main_qml.i"
+	@echo "... build/.rcc/qmlcache/sniffles_main_qml.s"
+	@echo "... build/.rcc/qmlcache/sniffles_qmlcache_loader.o"
+	@echo "... build/.rcc/qmlcache/sniffles_qmlcache_loader.i"
+	@echo "... build/.rcc/qmlcache/sniffles_qmlcache_loader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sniffles_autogen/mocs_compilation.o"
+	@echo "... sniffles_autogen/mocs_compilation.i"
+	@echo "... sniffles_autogen/mocs_compilation.s"
+	@echo "... sniffles_qmltyperegistrations.o"
+	@echo "... sniffles_qmltyperegistrations.i"
+	@echo "... sniffles_qmltyperegistrations.s"
 .PHONY : help
 
 
