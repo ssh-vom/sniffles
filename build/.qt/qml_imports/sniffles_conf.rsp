@@ -1,0 +1,14 @@
+-rootPath
+/Users/shivom/projects/sniffles
+-cmake-output
+-output-file
+/Users/shivom/projects/sniffles/build/.qt/qml_imports/sniffles_conf.cmake
+-importPath
+/Users/shivom/projects/sniffles/build/sniffles
+-importPath
+/Users/shivom/projects/sniffles/build
+-importPath
+/opt/homebrew/share/qt/qml
+-qrcFiles
+/Users/shivom/projects/sniffles/build/.qt/rcc/qmake_sniffles.qrc
+/Users/shivom/projects/sniffles/build/.qt/rcc/sniffles_raw_qml_0.qrc

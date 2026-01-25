@@ -1,0 +1,28 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 964,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 14
+                    }
+                ],
+                "filePath": "/Users/shivom/projects/sniffles/main.qml"
+            }
+        ],
+        "moduleId": "sniffles(sniffles)"
+    }
+]
