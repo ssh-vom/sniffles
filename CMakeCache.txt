@@ -283,7 +283,10 @@ PACKETPP_LIB:FILEPATH=/opt/homebrew/lib/libPacket++.a
 PCAPPLUSPLUS_INCLUDE_DIR:PATH=/opt/homebrew/opt/pcapplusplus/include/pcapplusplus
 
 //Path to a library.
-PCAPPLUSPLUS_LIB:FILEPATH=PCAPPLUSPLUS_LIB-NOTFOUND
+PCAPPLUSPLUS_LIB:FILEPATH=/opt/homebrew/lib/libPcap++.a
+
+//Path to a library.
+PCAP_LIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libpcap.tbd
 
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched

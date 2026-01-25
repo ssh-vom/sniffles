@@ -2,5 +2,3 @@ set(__QT_DEPLOY_TARGET_sniffles_FILE /Users/shivom/projects/sniffles/build/bin/s
 set(__QT_DEPLOY_TARGET_sniffles_TYPE EXECUTABLE)
 set(__QT_DEPLOY_TARGET_capture_FILE /Users/shivom/projects/sniffles/build/bin/capture)
 set(__QT_DEPLOY_TARGET_capture_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_LiveCapture_FILE /Users/shivom/projects/sniffles/build/bin/LiveCapture)
-set(__QT_DEPLOY_TARGET_LiveCapture_TYPE EXECUTABLE)

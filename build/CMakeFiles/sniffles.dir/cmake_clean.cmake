@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o"
   "CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o.d"
+  "CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o"
+  "CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o.d"
   "bin/sniffles"
   "bin/sniffles.pdb"
   "meta_types/qt6sniffles_metatypes.json"

@@ -1,0 +1,10 @@
+--bare
+-I
+/Users/shivom/projects/sniffles
+-I
+/opt/homebrew/share/qt/qml
+--resource
+/Users/shivom/projects/sniffles/.qt/rcc/qmake_sniffles.qrc
+--resource
+/Users/shivom/projects/sniffles/.qt/rcc/sniffles_raw_qml_0.qrc
+/Users/shivom/projects/sniffles/main.qml

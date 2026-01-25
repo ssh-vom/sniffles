@@ -6,6 +6,7 @@ sniffles_autogen/timestamp: /Users/shivom/projects/sniffles/CMakeLists.txt \
   CMakeFiles/4.2.0/CMakeCXXCompiler.cmake \
   CMakeFiles/4.2.0/CMakeSystem.cmake \
   /Users/shivom/projects/sniffles/main.cpp \
+  /Users/shivom/projects/sniffles/src/LiveCapture.cpp \
   /opt/homebrew/bin/cmake \
   /opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake \
   /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake \
@@ -1628,9 +1629,9 @@ sniffles_autogen/timestamp: /Users/shivom/projects/sniffles/CMakeLists.txt \
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginAdditionalTargetInfo.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginTargets-release.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginTargets.cmake:
 
@@ -1889,10 +1890,6 @@ sniffles_autogen/timestamp: /Users/shivom/projects/sniffles/CMakeLists.txt \
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dextraspluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargets.cmake:
 
@@ -2186,6 +2183,8 @@ sniffles_autogen/timestamp: /Users/shivom/projects/sniffles/CMakeLists.txt \
 
 /opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake:
 
+/Users/shivom/projects/sniffles/src/LiveCapture.cpp:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2iosstyleimplpluginConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake:
@@ -2393,6 +2392,14 @@ sniffles_autogen/timestamp: /Users/shivom/projects/sniffles/CMakeLists.txt \
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwebsocketsTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessAliasTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbopenwnnpluginConfig.cmake:
 
@@ -2668,10 +2675,6 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessAliasTargets.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinLocationPermissionPluginAdditionalTargetInfo.cmake:
@@ -2701,6 +2704,10 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinCalendarPermissionPluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSCNetworkReachabilityNetworkInformationPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
 
@@ -2739,10 +2746,6 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 /opt/homebrew/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6VirtualKeyboardpluginAdditionalTargetInfo.cmake:
 
@@ -2832,8 +2835,6 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Network/Qt6QSecureTransportBackendPluginTargets.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Config.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3deffectpluginTargets.cmake:
@@ -2854,6 +2855,14 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake:
 
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateConfig.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpluginspluginTargets-release.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginTargets-release.cmake:
@@ -2866,17 +2875,11 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersion.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dextraspluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateConfig.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinContactsPermissionPluginDependencies.cmake:
 
@@ -2887,18 +2890,6 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 /Users/shivom/projects/sniffles/CMakeLists.txt:
 
 .qt/qml_imports/sniffles_conf.cmake:
-
-/opt/homebrew/lib/cmake/Qt6QmlIntegrationPrivate/Qt6QmlIntegrationPrivateVersionlessAliasTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
-
-/opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake:
-
-/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginConfig.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtFeature.cmake:
-
-/opt/homebrew/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginAdditionalTargetInfo.cmake:
 
@@ -2946,6 +2937,8 @@ CMakeFiles/4.2.0/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake:
 
+/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake:
+
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginTargets.cmake:
 
 /opt/homebrew/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
@@ -2968,9 +2961,19 @@ CMakeFiles/4.2.0/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginTargets-release.cmake:
 
-/opt/homebrew/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginTargets-release.cmake:
-
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtvkbpluginspluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6QmlIntegrationPrivate/Qt6QmlIntegrationPrivateVersionlessAliasTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
+
+/opt/homebrew/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake:
+
+/opt/homebrew/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginConfig.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtFeature.cmake:
+
+/opt/homebrew/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
 
 /opt/homebrew/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginAdditionalTargetInfo.cmake:
 

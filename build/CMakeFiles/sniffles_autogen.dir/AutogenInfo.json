@@ -1393,6 +1393,7 @@
 		"/Users/shivom/projects/sniffles",
 		"/Users/shivom/projects/sniffles/include",
 		"/Users/shivom/projects/sniffles/src",
+		"/opt/homebrew/include/pcapplusplus",
 		"/opt/homebrew/lib/QtQml.framework/Versions/A/Headers/6.9.3",
 		"/opt/homebrew/lib/QtQml.framework/Versions/A/Headers/6.9.3/QtQml",
 		"/opt/homebrew/lib/QtCore.framework/Versions/A/Headers/6.9.3",
@@ -1470,7 +1471,8 @@
 	"SETTINGS_FILE" : "/Users/shivom/projects/sniffles/build/CMakeFiles/sniffles_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/Users/shivom/projects/sniffles/main.cpp", "MU", null ]
+		[ "/Users/shivom/projects/sniffles/main.cpp", "MU", null ],
+		[ "/Users/shivom/projects/sniffles/src/LiveCapture.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

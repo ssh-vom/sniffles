@@ -1,0 +1,5 @@
+module sniffles
+typeinfo sniffles.qmltypes
+prefer :/qt/qml/sniffles/
+depends QtQuick
+

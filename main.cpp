@@ -20,6 +20,8 @@ int main(int argc, char *argv[]) {
       },
       Qt::QueuedConnection);
 
+  DisplayAdapterNames();
+
   engine.load(url);
 
   return app.exec();

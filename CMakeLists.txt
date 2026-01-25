@@ -13,6 +13,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 qt_add_executable(sniffles
     main.cpp
+    src/LiveCapture.cpp
 )
 
 qt_add_qml_module(sniffles
@@ -55,10 +56,6 @@ add_executable(capture
     src/capture.cpp
 )
 
-add_executable(LiveCapture
-    src/LiveCapture.cpp
-)
-
 target_include_directories(capture
     PRIVATE
         ${PROJECT_SOURCE_DIR}/include
@@ -73,27 +70,13 @@ target_link_libraries(capture
         ${PCAP_LIB}
 )
 
-target_include_directories(LiveCapture
-    PRIVATE
-        ${PROJECT_SOURCE_DIR}/include
-        ${PCAPPLUSPLUS_INCLUDE_DIR}
-)
-
-target_link_libraries(LiveCapture
-    PRIVATE
-        ${PCAPPLUSPLUS_LIB}
-        ${PACKETPP_LIB}
-        ${COMMONPP_LIB}
-        ${PCAP_LIB}
-)
-
 if(APPLE)
     target_link_libraries(capture
         PRIVATE
             "-framework CoreFoundation"
             "-framework SystemConfiguration"
     )
-    target_link_libraries(LiveCapture
+    target_link_libraries(sniffles
         PRIVATE
             "-framework CoreFoundation"
             "-framework SystemConfiguration"
@@ -104,6 +87,7 @@ target_include_directories(sniffles
     PRIVATE
         ${PROJECT_SOURCE_DIR}/include
         ${PROJECT_SOURCE_DIR}/src
+        ${PCAPPLUSPLUS_INCLUDE_DIR}
 )
 
 target_link_libraries(sniffles
@@ -111,5 +95,9 @@ target_link_libraries(sniffles
         Qt6::Quick
         Qt6::Charts
         Qt6::Widgets
+        ${PCAPPLUSPLUS_LIB}
+        ${PACKETPP_LIB}
+        ${COMMONPP_LIB}
+        ${PCAP_LIB}
 )
 

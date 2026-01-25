@@ -170,10 +170,24 @@ CMakeFiles/sniffles.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sniffles.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivom/projects/sniffles/main.cpp -o CMakeFiles/sniffles.dir/main.cpp.s
 
+CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o: CMakeFiles/sniffles.dir/flags.make
+CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o: /Users/shivom/projects/sniffles/src/LiveCapture.cpp
+CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o: CMakeFiles/sniffles.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o -MF CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o.d -o CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o -c /Users/shivom/projects/sniffles/src/LiveCapture.cpp
+
+CMakeFiles/sniffles.dir/src/LiveCapture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sniffles.dir/src/LiveCapture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivom/projects/sniffles/src/LiveCapture.cpp > CMakeFiles/sniffles.dir/src/LiveCapture.cpp.i
+
+CMakeFiles/sniffles.dir/src/LiveCapture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sniffles.dir/src/LiveCapture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivom/projects/sniffles/src/LiveCapture.cpp -o CMakeFiles/sniffles.dir/src/LiveCapture.cpp.s
+
 CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o: CMakeFiles/sniffles.dir/flags.make
 CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o: sniffles_qmltyperegistrations.cpp
 CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o: CMakeFiles/sniffles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o -MF CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o.d -o CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o -c /Users/shivom/projects/sniffles/build/sniffles_qmltyperegistrations.cpp
 
 CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.s: cmake_force
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o: CMakeFiles/sniffles.dir/flags.make
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o: .qt/rcc/qrc_qmake_sniffles.cpp
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o: CMakeFiles/sniffles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o -MF CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o.d -o CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o -c /Users/shivom/projects/sniffles/build/.qt/rcc/qrc_qmake_sniffles.cpp
 
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.s: cmake_force
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o: CMakeFiles/sniffles.dir/flags.make
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o: .rcc/qmlcache/sniffles_qmlcache_loader.cpp
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o: CMakeFiles/sniffles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o -MF CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o.d -o CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o -c /Users/shivom/projects/sniffles/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp
 
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.i: cmake_force
@@ -215,7 +229,7 @@ CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.s: cmak
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o: CMakeFiles/sniffles.dir/flags.make
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o: .rcc/qmlcache/sniffles_main_qml.cpp
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o: CMakeFiles/sniffles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o -MF CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o.d -o CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.o -c /Users/shivom/projects/sniffles/build/.rcc/qmlcache/sniffles_main_qml.cpp
 
 CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_main_qml.cpp.s: cmake_force
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o: CMakeFiles/sniffles.dir/flags.make
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o: .qt/rcc/qrc_sniffles_raw_qml_0.cpp
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o: CMakeFiles/sniffles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o -MF CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o.d -o CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o -c /Users/shivom/projects/sniffles/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp
 
 CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.i: cmake_force
@@ -244,6 +258,7 @@ CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.s: cmake_force
 sniffles_OBJECTS = \
 "CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/sniffles.dir/main.cpp.o" \
+"CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o" \
 "CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o" \
 "CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o" \
 "CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o" \
@@ -255,6 +270,7 @@ sniffles_EXTERNAL_OBJECTS =
 
 bin/sniffles: CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.o
 bin/sniffles: CMakeFiles/sniffles.dir/main.cpp.o
+bin/sniffles: CMakeFiles/sniffles.dir/src/LiveCapture.cpp.o
 bin/sniffles: CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.o
 bin/sniffles: CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_qmake_sniffles.cpp.o
 bin/sniffles: CMakeFiles/sniffles.dir/build/.rcc/qmlcache/sniffles_qmlcache_loader.cpp.o
@@ -263,6 +279,10 @@ bin/sniffles: CMakeFiles/sniffles.dir/build/.qt/rcc/qrc_sniffles_raw_qml_0.cpp.o
 bin/sniffles: CMakeFiles/sniffles.dir/build.make
 bin/sniffles: /opt/homebrew/lib/QtQuick.framework/Versions/A/QtQuick
 bin/sniffles: /opt/homebrew/lib/QtCharts.framework/Versions/A/QtCharts
+bin/sniffles: /opt/homebrew/lib/libPcap++.a
+bin/sniffles: /opt/homebrew/lib/libPacket++.a
+bin/sniffles: /opt/homebrew/lib/libCommon++.a
+bin/sniffles: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libpcap.tbd
 bin/sniffles: /opt/homebrew/lib/QtQmlMeta.framework/Versions/A/QtQmlMeta
 bin/sniffles: /opt/homebrew/lib/QtQmlWorkerScript.framework/Versions/A/QtQmlWorkerScript
 bin/sniffles: /opt/homebrew/lib/QtQmlModels.framework/Versions/A/QtQmlModels
@@ -274,7 +294,7 @@ bin/sniffles: /opt/homebrew/lib/QtOpenGL.framework/Versions/A/QtOpenGL
 bin/sniffles: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 bin/sniffles: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 bin/sniffles: CMakeFiles/sniffles.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable bin/sniffles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shivom/projects/sniffles/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable bin/sniffles"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sniffles.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

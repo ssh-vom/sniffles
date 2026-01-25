@@ -7,6 +7,7 @@
  /Users/shivom/projects/sniffles/build/CMakeFiles/4.2.0/CMakeCXXCompiler.cmake
  /Users/shivom/projects/sniffles/build/CMakeFiles/4.2.0/CMakeSystem.cmake
  /Users/shivom/projects/sniffles/main.cpp
+ /Users/shivom/projects/sniffles/src/LiveCapture.cpp
  /opt/homebrew/bin/cmake
  /opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake
  /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake

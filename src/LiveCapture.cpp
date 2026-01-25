@@ -1,7 +1,5 @@
 #include "PcapLiveDeviceList.h"
-#include "SystemUtils.h"
 #include <LiveCapture.hpp>
-#include <algorithm>
 #include <iostream>
 #include <stdlib.h>
 

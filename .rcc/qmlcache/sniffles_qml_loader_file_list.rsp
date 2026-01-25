@@ -1,0 +1,5 @@
+--resource
+/Users/shivom/projects/sniffles/.qt/rcc/qmake_sniffles.qrc
+--resource
+/Users/shivom/projects/sniffles/.qt/rcc/sniffles_raw_qml_0.qrc
+/qt/qml/sniffles/main.qml

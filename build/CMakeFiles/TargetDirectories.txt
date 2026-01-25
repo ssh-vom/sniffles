@@ -10,7 +10,6 @@
 /Users/shivom/projects/sniffles/build/CMakeFiles/sniffles_copy_qml.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/sniffles_copy_res.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/capture.dir
-/Users/shivom/projects/sniffles/build/CMakeFiles/LiveCapture.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/module_sniffles_aotstats_target.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/all_aotstats.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/sniffles_qmlimportscan.dir
@@ -20,5 +19,3 @@
 /Users/shivom/projects/sniffles/build/CMakeFiles/sniffles_autogen.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/capture_autogen_timestamp_deps.dir
 /Users/shivom/projects/sniffles/build/CMakeFiles/capture_autogen.dir
-/Users/shivom/projects/sniffles/build/CMakeFiles/LiveCapture_autogen_timestamp_deps.dir
-/Users/shivom/projects/sniffles/build/CMakeFiles/LiveCapture_autogen.dir
