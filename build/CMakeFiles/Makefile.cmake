@@ -1014,6 +1014,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "sniffles/qmldir"
   "CMakeFiles/sniffles_autogen.dir/AutogenInfo.json"
   "CMakeFiles/capture_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/LiveCapture_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   "qmltypes/sniffles_foreign_types.txt"
   ".rcc/qmllint/sniffles.rsp"
@@ -1041,6 +1042,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sniffles_copy_qml.dir/DependInfo.cmake"
   "CMakeFiles/sniffles_copy_res.dir/DependInfo.cmake"
   "CMakeFiles/capture.dir/DependInfo.cmake"
+  "CMakeFiles/LiveCapture.dir/DependInfo.cmake"
   "CMakeFiles/module_sniffles_aotstats_target.dir/DependInfo.cmake"
   "CMakeFiles/all_aotstats.dir/DependInfo.cmake"
   "CMakeFiles/sniffles_qmlimportscan.dir/DependInfo.cmake"
@@ -1048,4 +1050,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sniffles_autogen.dir/DependInfo.cmake"
   "CMakeFiles/capture_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/capture_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/LiveCapture_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/LiveCapture_autogen.dir/DependInfo.cmake"
   )

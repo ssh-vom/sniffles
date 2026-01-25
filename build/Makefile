@@ -273,6 +273,19 @@ capture/fast:
 .PHONY : capture/fast
 
 #=============================================================================
+# Target rules for targets named LiveCapture
+
+# Build rule for target.
+LiveCapture: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LiveCapture
+.PHONY : LiveCapture
+
+# fast build rule for target.
+LiveCapture/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/build
+.PHONY : LiveCapture/fast
+
+#=============================================================================
 # Target rules for targets named module_sniffles_aotstats_target
 
 # Build rule for target.
@@ -362,6 +375,56 @@ capture_autogen: cmake_check_build_system
 capture_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/capture_autogen.dir/build.make CMakeFiles/capture_autogen.dir/build
 .PHONY : capture_autogen/fast
+
+#=============================================================================
+# Target rules for targets named LiveCapture_autogen_timestamp_deps
+
+# Build rule for target.
+LiveCapture_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LiveCapture_autogen_timestamp_deps
+.PHONY : LiveCapture_autogen_timestamp_deps
+
+# fast build rule for target.
+LiveCapture_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture_autogen_timestamp_deps.dir/build.make CMakeFiles/LiveCapture_autogen_timestamp_deps.dir/build
+.PHONY : LiveCapture_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named LiveCapture_autogen
+
+# Build rule for target.
+LiveCapture_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LiveCapture_autogen
+.PHONY : LiveCapture_autogen
+
+# fast build rule for target.
+LiveCapture_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture_autogen.dir/build.make CMakeFiles/LiveCapture_autogen.dir/build
+.PHONY : LiveCapture_autogen/fast
+
+LiveCapture_autogen/mocs_compilation.o: LiveCapture_autogen/mocs_compilation.cpp.o
+.PHONY : LiveCapture_autogen/mocs_compilation.o
+
+# target to build an object file
+LiveCapture_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/LiveCapture_autogen/mocs_compilation.cpp.o
+.PHONY : LiveCapture_autogen/mocs_compilation.cpp.o
+
+LiveCapture_autogen/mocs_compilation.i: LiveCapture_autogen/mocs_compilation.cpp.i
+.PHONY : LiveCapture_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+LiveCapture_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/LiveCapture_autogen/mocs_compilation.cpp.i
+.PHONY : LiveCapture_autogen/mocs_compilation.cpp.i
+
+LiveCapture_autogen/mocs_compilation.s: LiveCapture_autogen/mocs_compilation.cpp.s
+.PHONY : LiveCapture_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+LiveCapture_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/LiveCapture_autogen/mocs_compilation.cpp.s
+.PHONY : LiveCapture_autogen/mocs_compilation.cpp.s
 
 build/.qt/rcc/qrc_qmake_sniffles.o: build/.qt/rcc/qrc_qmake_sniffles.cpp.o
 .PHONY : build/.qt/rcc/qrc_qmake_sniffles.o
@@ -555,6 +618,30 @@ sniffles_qmltyperegistrations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_qmltyperegistrations.cpp.s
 .PHONY : sniffles_qmltyperegistrations.cpp.s
 
+src/LiveCapture.o: src/LiveCapture.cpp.o
+.PHONY : src/LiveCapture.o
+
+# target to build an object file
+src/LiveCapture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/src/LiveCapture.cpp.o
+.PHONY : src/LiveCapture.cpp.o
+
+src/LiveCapture.i: src/LiveCapture.cpp.i
+.PHONY : src/LiveCapture.i
+
+# target to preprocess a source file
+src/LiveCapture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/src/LiveCapture.cpp.i
+.PHONY : src/LiveCapture.cpp.i
+
+src/LiveCapture.s: src/LiveCapture.cpp.s
+.PHONY : src/LiveCapture.s
+
+# target to generate assembly for a file
+src/LiveCapture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LiveCapture.dir/build.make CMakeFiles/LiveCapture.dir/src/LiveCapture.cpp.s
+.PHONY : src/LiveCapture.cpp.s
+
 src/capture.o: src/capture.cpp.o
 .PHONY : src/capture.o
 
@@ -587,6 +674,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... LiveCapture_autogen"
+	@echo "... LiveCapture_autogen_timestamp_deps"
 	@echo "... all_aotstats"
 	@echo "... all_qmllint"
 	@echo "... all_qmllint_json"
@@ -604,8 +693,12 @@ help:
 	@echo "... sniffles_qmllint_json"
 	@echo "... sniffles_qmllint_module"
 	@echo "... sniffles_qmltyperegistration"
+	@echo "... LiveCapture"
 	@echo "... capture"
 	@echo "... sniffles"
+	@echo "... LiveCapture_autogen/mocs_compilation.o"
+	@echo "... LiveCapture_autogen/mocs_compilation.i"
+	@echo "... LiveCapture_autogen/mocs_compilation.s"
 	@echo "... build/.qt/rcc/qrc_qmake_sniffles.o"
 	@echo "... build/.qt/rcc/qrc_qmake_sniffles.i"
 	@echo "... build/.qt/rcc/qrc_qmake_sniffles.s"
@@ -630,6 +723,9 @@ help:
 	@echo "... sniffles_qmltyperegistrations.o"
 	@echo "... sniffles_qmltyperegistrations.i"
 	@echo "... sniffles_qmltyperegistrations.s"
+	@echo "... src/LiveCapture.o"
+	@echo "... src/LiveCapture.i"
+	@echo "... src/LiveCapture.s"
 	@echo "... src/capture.o"
 	@echo "... src/capture.i"
 	@echo "... src/capture.s"

@@ -55,6 +55,10 @@ add_executable(capture
     src/capture.cpp
 )
 
+add_executable(LiveCapture
+    src/LiveCapture.cpp
+)
+
 target_include_directories(capture
     PRIVATE
         ${PROJECT_SOURCE_DIR}/include
@@ -68,6 +72,33 @@ target_link_libraries(capture
         ${COMMONPP_LIB}
         ${PCAP_LIB}
 )
+
+target_include_directories(LiveCapture
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/include
+        ${PCAPPLUSPLUS_INCLUDE_DIR}
+)
+
+target_link_libraries(LiveCapture
+    PRIVATE
+        ${PCAPPLUSPLUS_LIB}
+        ${PACKETPP_LIB}
+        ${COMMONPP_LIB}
+        ${PCAP_LIB}
+)
+
+if(APPLE)
+    target_link_libraries(capture
+        PRIVATE
+            "-framework CoreFoundation"
+            "-framework SystemConfiguration"
+    )
+    target_link_libraries(LiveCapture
+        PRIVATE
+            "-framework CoreFoundation"
+            "-framework SystemConfiguration"
+    )
+endif()
 
 target_include_directories(sniffles
     PRIVATE

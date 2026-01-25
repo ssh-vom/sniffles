@@ -1,3 +1,4 @@
+#include <LiveCapture.hpp>
 #include <QApplication>
 #include <QObject>
 #include <QQmlApplicationEngine>

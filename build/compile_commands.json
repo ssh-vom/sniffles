@@ -52,5 +52,17 @@
   "command": "/usr/bin/c++  -I/Users/shivom/projects/sniffles/build/capture_autogen/include -I/Users/shivom/projects/sniffles/include -I/opt/homebrew/include/pcapplusplus -std=gnu++17 -arch arm64 -o CMakeFiles/capture.dir/src/capture.cpp.o -c /Users/shivom/projects/sniffles/src/capture.cpp",
   "file": "/Users/shivom/projects/sniffles/src/capture.cpp",
   "output": "CMakeFiles/capture.dir/src/capture.cpp.o"
+},
+{
+  "directory": "/Users/shivom/projects/sniffles/build",
+  "command": "/usr/bin/c++  -I/Users/shivom/projects/sniffles/build/LiveCapture_autogen/include -I/Users/shivom/projects/sniffles/include -I/opt/homebrew/include/pcapplusplus -std=gnu++17 -arch arm64 -o CMakeFiles/LiveCapture.dir/LiveCapture_autogen/mocs_compilation.cpp.o -c /Users/shivom/projects/sniffles/build/LiveCapture_autogen/mocs_compilation.cpp",
+  "file": "/Users/shivom/projects/sniffles/build/LiveCapture_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/LiveCapture.dir/LiveCapture_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/shivom/projects/sniffles/build",
+  "command": "/usr/bin/c++  -I/Users/shivom/projects/sniffles/build/LiveCapture_autogen/include -I/Users/shivom/projects/sniffles/include -I/opt/homebrew/include/pcapplusplus -std=gnu++17 -arch arm64 -o CMakeFiles/LiveCapture.dir/src/LiveCapture.cpp.o -c /Users/shivom/projects/sniffles/src/LiveCapture.cpp",
+  "file": "/Users/shivom/projects/sniffles/src/LiveCapture.cpp",
+  "output": "CMakeFiles/LiveCapture.dir/src/LiveCapture.cpp.o"
 }
 ]
