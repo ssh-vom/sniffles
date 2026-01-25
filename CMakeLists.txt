@@ -4,7 +4,7 @@ project(sniffles LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick Charts Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Quick Charts Widgets)
 
 qt_standard_project_setup()
 qt_policy(SET QTP0001 NEW)
@@ -93,6 +93,7 @@ target_include_directories(sniffles
 target_link_libraries(sniffles
     PRIVATE
         Qt6::Quick
+        Qt6::Core
         Qt6::Charts
         Qt6::Widgets
         ${PCAPPLUSPLUS_LIB}

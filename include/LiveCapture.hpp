@@ -2,4 +2,5 @@
 #define LIVE_CAPTURE_HPP
 
 void DisplayAdapterNames(); // Prints the interface names
+void NetworkRead();
 #endif
