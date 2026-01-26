@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/sniffles">/Users/shivom/projects/sniffles/sniffles</file>
-
-  </qresource>
-</RCC>

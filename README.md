@@ -1,17 +1,17 @@
-# Packet Sniffer C++
+# sniffles
 
-This project aims to be an attempt at building out a packet sniffer similar to wireshark in c++.
+sniffles is a C++17 packet sniffer project that starts as a CLI for listing capture interfaces. This repo provides the scaffolding for later capture, decode, and UI layers while keeping the current milestone small and testable.
 
-This will not have nearly as many features, but it will improve my understanding. 
+## Build
 
-The main libraries involved will be pcap
+```sh
+cmake --preset debug
+cmake --build --preset debug
+```
 
+## Example usage
 
-<img width="7906" height="4856" alt="image" src="https://github.com/user-attachments/assets/e475f6da-3c3d-4c16-a0d0-2e5afc9b4d3d" />
-
-At it's core, a packet sniffer intercepts messages and analyzes their contents. Some of the common usecases that I have found so far include
-- Disecting headers
-- Analyzing request payloads
-- Determining the nature of a network request/what protocol version it uses
-  - HTTP/1.1
-  - UDP messaging
+```sh
+./build/debug/sniffles --help
+./build/debug/sniffles --list-ifaces
+```

@@ -4,27 +4,10 @@ project(sniffles LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Quick Charts Widgets)
-
-qt_standard_project_setup()
-qt_policy(SET QTP0001 NEW)
-
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
-qt_add_executable(sniffles
-    main.cpp
-    src/LiveCapture.cpp
-)
-
-qt_add_qml_module(sniffles
-    URI sniffles
-    VERSION 1.0
-    QML_FILES
-        main.qml
-)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 find_path(PCAPPLUSPLUS_INCLUDE_DIR
-    NAMES IPv4Layer.h
+    NAMES PcapLiveDeviceList.h
     PATHS /opt/homebrew/opt/pcapplusplus/include/pcapplusplus /opt/homebrew/include/pcapplusplus /usr/local/include/pcapplusplus
 )
 
@@ -49,56 +32,65 @@ find_library(PCAP_LIB
 )
 
 if (NOT PCAPPLUSPLUS_INCLUDE_DIR OR NOT PCAPPLUSPLUS_LIB OR NOT PACKETPP_LIB OR NOT COMMONPP_LIB OR NOT PCAP_LIB)
-    message(FATAL_ERROR "PcapPlusPlus/libpcap not found. Install with brew install pcapplusplus.")
+    message(FATAL_ERROR "PcapPlusPlus/libpcap not found. Install with: brew install pcapplusplus libpcap")
 endif()
 
-add_executable(capture
-    src/capture.cpp
+set(SNIFFLES_CORE_SOURCES
+    src/app/App.cpp
+    src/capture/DeviceEnumerator.cpp
+    src/capture/CaptureService.cpp
+    src/capture/BpfFilter.cpp
+    src/decode/Decoders.cpp
+    src/decode/FlowTracker.cpp
+    src/ui/MainWindow.cpp
+    src/ui/models/PacketTableModel.cpp
+    src/util/Logging.cpp
+    src/util/Time.cpp
 )
 
-target_include_directories(capture
-    PRIVATE
-        ${PROJECT_SOURCE_DIR}/include
-        ${PCAPPLUSPLUS_INCLUDE_DIR}
-)
+add_library(sniffles_core STATIC ${SNIFFLES_CORE_SOURCES})
 
-target_link_libraries(capture
-    PRIVATE
-        ${PCAPPLUSPLUS_LIB}
-        ${PACKETPP_LIB}
-        ${COMMONPP_LIB}
-        ${PCAP_LIB}
-)
-
-if(APPLE)
-    target_link_libraries(capture
-        PRIVATE
-            "-framework CoreFoundation"
-            "-framework SystemConfiguration"
-    )
-    target_link_libraries(sniffles
-        PRIVATE
-            "-framework CoreFoundation"
-            "-framework SystemConfiguration"
-    )
-endif()
-
-target_include_directories(sniffles
-    PRIVATE
-        ${PROJECT_SOURCE_DIR}/include
+target_include_directories(sniffles_core
+    PUBLIC
         ${PROJECT_SOURCE_DIR}/src
         ${PCAPPLUSPLUS_INCLUDE_DIR}
 )
 
-target_link_libraries(sniffles
-    PRIVATE
-        Qt6::Quick
+target_link_libraries(sniffles_core
+    PUBLIC
         Qt6::Core
-        Qt6::Charts
-        Qt6::Widgets
         ${PCAPPLUSPLUS_LIB}
         ${PACKETPP_LIB}
         ${COMMONPP_LIB}
         ${PCAP_LIB}
 )
 
+if (APPLE)
+    target_link_libraries(sniffles_core
+        PUBLIC
+            "-framework CoreFoundation"
+            "-framework SystemConfiguration"
+    )
+endif()
+
+add_executable(sniffles
+    src/main.cpp
+)
+
+target_link_libraries(sniffles
+    PRIVATE
+        sniffles_core
+)
+
+enable_testing()
+
+add_executable(test_decode
+    tests/test_decode.cpp
+)
+
+target_link_libraries(test_decode
+    PRIVATE
+        sniffles_core
+)
+
+add_test(NAME test_decode COMMAND test_decode)
