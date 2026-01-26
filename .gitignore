@@ -39,3 +39,27 @@
 
 # debug information files
 *.dwo
+
+
+# build artifacts
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# IDE / tooling
+.cache/
+.clangd/
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Qt generated
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
