@@ -1,0 +1,6 @@
+set(__QT_DEPLOY_TARGET_sniffles_core_FILE /Users/shivom/projects/sniffles/libsniffles_core.a)
+set(__QT_DEPLOY_TARGET_sniffles_core_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_sniffles_FILE /Users/shivom/projects/sniffles/sniffles)
+set(__QT_DEPLOY_TARGET_sniffles_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_test_decode_FILE /Users/shivom/projects/sniffles/test_decode)
+set(__QT_DEPLOY_TARGET_test_decode_TYPE EXECUTABLE)

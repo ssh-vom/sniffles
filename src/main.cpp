@@ -10,7 +10,8 @@ void PrintHelp(const char *program) {
             << "Usage: " << program << " [--help] [--list-ifaces]\n\n"
             << "Options:\n"
             << "  --help        Show this help message\n"
-            << "  --list-ifaces List capture interfaces\n";
+            << "  --list-ifaces List capture interfaces\n"
+            << "  --capture-iface Capture from a given interface \n";
 }
 } // namespace
 
@@ -25,12 +26,19 @@ int main(int argc, char *argv[]) {
   }
 
   bool list_ifaces = false;
+  bool capture_iface = false;
   std::string unknown_option;
 
   for (const auto &arg : args) {
     if (arg == "--list-ifaces") {
       list_ifaces = true;
-    } else if (arg == "--help" || arg == "-h") {
+    } else if (arg == "--capture-iface") {
+      capture_iface = true;
+      // parse the value of the device name as well
+      std::cout << "capturing from interface" << "\n";
+    }
+
+    else if (arg == "--help" || arg == "-h") {
       continue;
     } else {
       unknown_option = arg;
@@ -56,6 +64,10 @@ int main(int argc, char *argv[]) {
       std::cout << device.name << " - " << device.description << "\n";
     }
     return 0;
+  }
+
+  if (capture_iface) {
+    // implemenet capture inface
   }
 
   PrintHelp(argv[0]);
