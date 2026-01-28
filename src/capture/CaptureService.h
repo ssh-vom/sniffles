@@ -16,8 +16,10 @@ private:
   std::string device_name_;
   pcpp::PcapLiveDevice *device_ = nullptr; // pointer starts off null
   std::function<void(pcpp::RawPacket *)> packet_callback;
+  // static required for c-style function callback
   static void OnPacketArrives(pcpp::RawPacket *packet,
                               pcpp::PcapLiveDevice *device, void *user_data);
+  void HandlePacket(pcpp::RawPacket *packet);
 };
 } // namespace sniffles::capture
 // namespace sniffles::capture

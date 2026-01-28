@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+#include "capture/CaptureService.h"
 #include "capture/DeviceEnumerator.h"
 
 namespace {
@@ -16,29 +17,26 @@ void PrintHelp(const char *program) {
 } // namespace
 
 int main(int argc, char *argv[]) {
+
   std::vector<std::string> args(argv + 1, argv + argc);
-
-  for (const auto &arg : args) {
-    if (arg == "--help" || arg == "-h") {
-      PrintHelp(argv[0]);
-      return 0;
-    }
-  }
-
+  std::string interface;
   bool list_ifaces = false;
   bool capture_iface = false;
   std::string unknown_option;
 
-  for (const auto &arg : args) {
+  for (size_t i = 0; i < args.size(); ++i) {
+    const auto &arg = args[i];
     if (arg == "--list-ifaces") {
       list_ifaces = true;
     } else if (arg == "--capture-iface") {
       capture_iface = true;
-      // parse the value of the device name as well
-      std::cout << "capturing from interface" << "\n";
-    }
-
-    else if (arg == "--help" || arg == "-h") {
+      if (i + 1 >= args.size()) {
+        std::cerr << "Error: --capture-iface requires an interface name \n";
+        return 1;
+      }
+      interface = args[i + 1];
+      break;
+    } else if (arg == "--help" || arg == "-h") {
       continue;
     } else {
       unknown_option = arg;
@@ -67,8 +65,18 @@ int main(int argc, char *argv[]) {
   }
 
   if (capture_iface) {
-    // implemenet capture inface
+    sniffles::capture::CaptureService capture_service;
+    if (!capture_service.Start(interface)) {
+      std::cerr << "Failed to start capture on " << interface << "\n";
+      return 1;
+    }
+
+    std::cout << "Capturing on " << interface << "... Press Enter to stop .\n";
+    std::cin.get();
+    capture_service.Stop();
+    return 0;
   }
+  // implemenet capture inface
 
   PrintHelp(argv[0]);
   return 0;
