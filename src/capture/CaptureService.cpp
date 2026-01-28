@@ -77,6 +77,7 @@ void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
     if (ip_layer) {
       std::cout << " Source IP: " << ip_layer->getSrcIPAddress() << "\n";
       std::cout << " Dest IP: " << ip_layer->getDstIPAddress() << "\n";
+      std::cout << " Protocol: " << ip_layer->getProtocol() << "\n";
     }
   }
 }
