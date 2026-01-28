@@ -1,4 +1,6 @@
 #include "capture/CaptureService.h"
+#include <IPv4Layer.h>
+#include <Packet.h>
 #include <PcapLiveDevice.h>
 #include <PcapLiveDeviceList.h>
 #include <RawPacket.h>
@@ -53,16 +55,30 @@ void CaptureService::OnPacketArrives(pcpp::RawPacket *packet,
 }
 void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
 
-  // handle packet should just print out the packet data for now
+  //   // handle packet should just print out the packet data for now
+  //
+  //   const timespec timestamp = packet->getPacketTimeStamp();
+  //   const int frame_length = packet->getFrameLength();
+  //   const pcpp::LinkLayerType link_layer_type = packet->getLinkLayerType();
+  //   const uint8_t *raw_data = packet->getRawData();
+  //   // const int raw_data_len = packet->getRawDataLen();
+  //   std::cout << "Time:" << timestamp.tv_sec << "." << timestamp.tv_nsec /
+  //   1000
+  //             << " | Length: " << "frame length" << frame_length << "raw
+  //             data"
+  //             << &raw_data << "link layer type" << link_layer_type << "\n";
 
-  const timespec timestamp = packet->getPacketTimeStamp();
-  const int frame_length = packet->getFrameLength();
-  const pcpp::LinkLayerType link_layer_type = packet->getLinkLayerType();
-  const uint8_t *raw_data = packet->getRawData();
-  // const int raw_data_len = packet->getRawDataLen();
-  std::cout << "timestamp" << timestamp.tv_sec << "frame length" << frame_length
-            << "raw data" << &raw_data << "link layer type" << link_layer_type
-            << "\n";
+  pcpp::Packet parsedPacket(packet);
+  std::cout << "Packet Length: " << parsedPacket.getRawPacket()->getRawDataLen()
+            << " bytes\n";
+
+  if (parsedPacket.isPacketOfType(pcpp::IPv4)) {
+    pcpp::IPv4Layer *ip_layer = parsedPacket.getLayerOfType<pcpp::IPv4Layer>();
+    if (ip_layer) {
+      std::cout << " Source IP: " << ip_layer->getSrcIPAddress() << "\n";
+      std::cout << " Dest IP: " << ip_layer->getDstIPAddress() << "\n";
+    }
+  }
 }
 
 } // namespace sniffles::capture
