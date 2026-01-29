@@ -5,6 +5,7 @@
 #include <string>
 
 namespace sniffles::capture {
+
 class CaptureService {
 public:
   bool Start(const std::string &device_name);
@@ -20,6 +21,7 @@ private:
   static void OnPacketArrives(pcpp::RawPacket *packet,
                               pcpp::PcapLiveDevice *device, void *user_data);
   void HandlePacket(pcpp::RawPacket *packet);
+  std::string GetProtocolName(uint8_t protocol);
 };
 } // namespace sniffles::capture
 // namespace sniffles::capture

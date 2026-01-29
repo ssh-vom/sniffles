@@ -76,7 +76,6 @@ int main(int argc, char *argv[]) {
     capture_service.Stop();
     return 0;
   }
-  // implemenet capture inface
 
   PrintHelp(argv[0]);
   return 0;

@@ -34,6 +34,27 @@ bool CaptureService::Start(const std::string &device_name) {
   return true;
 }
 
+std::string CaptureService::GetProtocolName(uint8_t protocol) {
+  switch (protocol) {
+  case 1:
+    return "ICMP";
+  case 6:
+    return "TCP";
+  case 17:
+    return "UDP";
+  case 2:
+    return "IGMP";
+  case 47:
+    return "GRE";
+  case 50:
+    return "ESP";
+  case 51:
+    return "AH";
+  default:
+    return "Unknown (" + std::to_string(protocol) + ")";
+  }
+}
+
 void CaptureService::Stop() {
 
   if (running_ && device_ != nullptr) {
@@ -77,7 +98,8 @@ void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
     if (ip_layer) {
       std::cout << " Source IP: " << ip_layer->getSrcIPAddress() << "\n";
       std::cout << " Dest IP: " << ip_layer->getDstIPAddress() << "\n";
-      std::cout << " Protocol: " << ip_layer->getProtocol() << "\n";
+      std::cout << " Protocol: " << GetProtocolName(ip_layer->getProtocol())
+                << "\n";
     }
   }
 }
