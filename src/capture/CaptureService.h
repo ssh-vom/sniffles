@@ -1,5 +1,7 @@
 #pragma once
 
+#include "decode/PacketInfo.h"
+#include "util/ThreadSafeQueue.h"
 #include <PcapLiveDevice.h>
 #include <functional>
 #include <string>
@@ -11,6 +13,9 @@ public:
   bool Start(const std::string &device_name);
   void Stop();
   bool IsRunning() const;
+  util::ThreadSafeQueue<decode::PacketInfo> &GetPacketQueue() {
+    return packet_queue_;
+  }
 
 private:
   bool running_ = false;
@@ -18,6 +23,7 @@ private:
   pcpp::PcapLiveDevice *device_ = nullptr; // pointer starts off null
   std::function<void(pcpp::RawPacket *)> packet_callback;
   // static required for c-style function callback
+  util::ThreadSafeQueue<decode::PacketInfo> packet_queue_;
   static void OnPacketArrives(pcpp::RawPacket *packet,
                               pcpp::PcapLiveDevice *device, void *user_data);
   void HandlePacket(pcpp::RawPacket *packet);

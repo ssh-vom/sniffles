@@ -4,7 +4,9 @@
 #include <PcapLiveDevice.h>
 #include <PcapLiveDeviceList.h>
 #include <RawPacket.h>
-#include <iostream>
+#include <TcpLayer.h>
+#include <UDPLayer.h>
+#include <chrono>
 #include <sys/time.h>
 
 namespace sniffles::capture {
@@ -76,32 +78,43 @@ void CaptureService::OnPacketArrives(pcpp::RawPacket *packet,
 }
 void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
 
-  //   // handle packet should just print out the packet data for now
-  //
-  //   const timespec timestamp = packet->getPacketTimeStamp();
-  //   const int frame_length = packet->getFrameLength();
-  //   const pcpp::LinkLayerType link_layer_type = packet->getLinkLayerType();
-  //   const uint8_t *raw_data = packet->getRawData();
-  //   // const int raw_data_len = packet->getRawDataLen();
-  //   std::cout << "Time:" << timestamp.tv_sec << "." << timestamp.tv_nsec /
-  //   1000
-  //             << " | Length: " << "frame length" << frame_length << "raw
-  //             data"
-  //             << &raw_data << "link layer type" << link_layer_type << "\n";
+  decode::PacketInfo info;
+  timespec ts = packet->getPacketTimeStamp();
+  info.timestamp = std::chrono::system_clock::from_time_t(ts.tv_sec);
+  info.length = packet->getFrameLength();
+  info.captured_length = packet->getRawDataLen();
 
   pcpp::Packet parsedPacket(packet);
-  std::cout << "Packet Length: " << parsedPacket.getRawPacket()->getRawDataLen()
-            << " bytes\n";
 
   if (parsedPacket.isPacketOfType(pcpp::IPv4)) {
     pcpp::IPv4Layer *ip_layer = parsedPacket.getLayerOfType<pcpp::IPv4Layer>();
     if (ip_layer) {
-      std::cout << " Source IP: " << ip_layer->getSrcIPAddress() << "\n";
-      std::cout << " Dest IP: " << ip_layer->getDstIPAddress() << "\n";
-      std::cout << " Protocol: " << GetProtocolName(ip_layer->getProtocol())
-                << "\n";
+      info.flow.src = ip_layer->getSrcIPAddress().toString();
+      info.flow.dst = ip_layer->getDstIPAddress().toString();
+      info.protocol_num = ip_layer->getIPv4Header()->protocol;
+      info.protocol_name = GetProtocolName(info.protocol_num);
     }
   }
+  if (parsedPacket.isPacketOfType(pcpp::TCP)) {
+    pcpp::TcpLayer *tcp_layer = parsedPacket.getLayerOfType<pcpp::TcpLayer>();
+    if (tcp_layer) {
+      info.flow.src_port = tcp_layer->getSrcPort();
+      info.flow.dst_port = tcp_layer->getDstPort();
+    }
+  }
+  if (parsedPacket.isPacketOfType(pcpp::UDP)) {
+    pcpp::UdpLayer *udp_layer = parsedPacket.getLayerOfType<pcpp::UdpLayer>();
+    if (udp_layer) {
+      info.flow.src_port = udp_layer->getSrcPort();
+      info.flow.dst_port = udp_layer->getDstPort();
+    }
+  }
+
+  info.summary = info.protocol_name + " " + info.flow.src + ":" +
+                 std::to_string(info.flow.src_port) + " -> " + info.flow.dst +
+                 ":" + std::to_string(info.flow.dst_port);
+
+  packet_queue_.Push(info);
 }
 
 } // namespace sniffles::capture
