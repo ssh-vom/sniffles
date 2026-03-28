@@ -30,6 +30,11 @@ std::string BuildSummary(const sniffles::decode::PacketInfo &info) {
 } // namespace
 
 namespace sniffles::capture {
+
+CaptureService::CaptureService(std::size_t buffer_capacity)
+    : packet_queue_(buffer_capacity),
+      packet_buffer_(buffer_capacity) {}
+
 bool CaptureService::Start(const CaptureRequest &request) {
   assert(!request.device_name.empty());
   device_name_ = request.device_name;
@@ -42,9 +47,9 @@ bool CaptureService::Start(const CaptureRequest &request) {
   if (device_ == nullptr)
     return false;
 
-  if (!device_->open()) { // if we can't open the device
+  if (!device_->open()) {
     device_ = nullptr;
-    return false; // failed
+    return false;
   }
 
   if (!filter_expression_.empty() && !device_->setFilter(filter_expression_)) {
@@ -86,36 +91,43 @@ std::string CaptureService::GetProtocolName(uint8_t protocol) {
 }
 
 void CaptureService::Stop() {
-
   if (running_ && device_ != nullptr) {
     device_->stopCapture();
     device_->close();
   }
+
+  FlushBufferToQueue();
 
   running_ = false;
   device_ = nullptr;
 }
 
 bool CaptureService::IsRunning() const { return running_; }
+
 CaptureStats CaptureService::GetStats() const {
   if (!running_) {
-    return {};
+    return stats_;
   }
 
-  pcpp::IPcapDevice::PcapStats stats;
-  device_->getStatistics(stats);
-  return {stats.packetsRecv, stats.packetsDrop, stats.packetsDropByInterface};
+  pcpp::IPcapDevice::PcapStats device_stats;
+  device_->getStatistics(device_stats);
+
+  CaptureStats result = stats_;
+  result.packets_received = device_stats.packetsRecv;
+  result.packets_dropped = device_stats.packetsDrop;
+  result.packets_dropped_by_interface = device_stats.packetsDropByInterface;
+
+  return result;
 }
 
 void CaptureService::OnPacketArrives(pcpp::RawPacket *packet,
                                      pcpp::PcapLiveDevice *device,
                                      void *user_data) {
-
   CaptureService *self = static_cast<CaptureService *>(user_data);
   self->HandlePacket(packet);
 }
-void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
 
+void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
   decode::PacketInfo info;
   timespec ts = packet->getPacketTimeStamp();
   info.timestamp = std::chrono::system_clock::from_time_t(ts.tv_sec);
@@ -168,7 +180,19 @@ void CaptureService::HandlePacket(pcpp::RawPacket *packet) {
 
   info.summary = BuildSummary(info);
 
-  packet_queue_.Push(info);
+  if (packet_buffer_.full()) {
+    packet_buffer_.pop_front();
+    ++stats_.packets_dropped_by_buffer;
+  }
+
+  packet_buffer_.push_back(std::move(info));
+}
+
+void CaptureService::FlushBufferToQueue() {
+  while (!packet_buffer_.empty()) {
+    packet_queue_.Push(std::move(packet_buffer_.front()));
+    packet_buffer_.pop_front();
+  }
 }
 
 } // namespace sniffles::capture

@@ -1,73 +1,56 @@
+#include <boost/program_options.hpp>
 #include <iostream>
 #include <string>
-#include <vector>
 
 #include "app/App.h"
 #include "capture/CaptureService.h"
 #include "capture/DeviceEnumerator.h"
 
+namespace po = boost::program_options;
+
 namespace {
-void PrintHelp(const char *program) {
-  std::cout << "sniffles - packet sniffer CLI\n\n"
-            << "Usage: " << program
-            << " [--help] [--list-ifaces] [--capture-iface <name>] [--filter <expr>]\n\n"
-            << "Options:\n"
-            << "  --help        Show this help message\n"
-            << "  --list-ifaces List capture interfaces\n"
-            << "  --capture-iface Capture from a given interface\n"
-            << "  --filter      Apply a BPF filter to capture\n"
-            << "\nRun with no options to open the UI.\n";
+void PrintHelp(const po::options_description &desc) {
+  std::cout << "sniffles - packet sniffer CLI\n\n" << desc << "\n";
 }
 } // namespace
 
 int main(int argc, char *argv[]) {
+  po::options_description desc("Options");
+  desc.add_options()
+    ("help,h", "Show this help message")
+    ("list-ifaces", "List capture interfaces")
+    ("capture-iface", po::value<std::string>(), "Capture from a given interface")
+    ("filter", po::value<std::string>(), "Apply a BPF filter to capture")
+    ("config-file", po::value<std::string>(), "Load options from a configuration file");
 
-  std::vector<std::string> args(argv + 1, argv + argc);
-  std::string interface;
-  bool list_ifaces = false;
-  bool capture_iface = false;
-  std::string filter_expression;
-  std::string unknown_option;
+  po::variables_map vm;
 
-  for (size_t i = 0; i < args.size(); ++i) {
-    const auto &arg = args[i];
-    if (arg == "--list-ifaces") {
-      list_ifaces = true;
-    } else if (arg == "--capture-iface") {
-      capture_iface = true;
-      if (i + 1 >= args.size()) {
-        std::cerr << "Error: --capture-iface requires an interface name \n";
-        return 1;
-      }
-      interface = args[i + 1];
-      ++i;
-    } else if (arg == "--filter") {
-      if (i + 1 >= args.size()) {
-        std::cerr << "Error: --filter requires an expression\n";
-        return 1;
-      }
-      filter_expression = args[i + 1];
-      ++i;
-    } else if (arg == "--help" || arg == "-h") {
-      continue;
-    } else {
-      unknown_option = arg;
-      break;
+  try {
+    po::store(po::parse_command_line(argc, argv, desc), vm);
+
+    if (vm.count("config-file")) {
+      std::string config_file = vm["config-file"].as<std::string>();
+      po::store(po::parse_config_file<char>(config_file.c_str(), desc), vm);
     }
-  }
 
-  if (!unknown_option.empty()) {
-    std::cerr << "Unknown option: " << unknown_option << "\n";
-    PrintHelp(argv[0]);
+    po::notify(vm);
+  } catch (const po::error &e) {
+    std::cerr << "Error: " << e.what() << "\n";
+    PrintHelp(desc);
     return 2;
   }
 
-  if (args.empty()) {
+  if (vm.count("help")) {
+    PrintHelp(desc);
+    return 0;
+  }
+
+  if (vm.empty() || (!vm.count("list-ifaces") && !vm.count("capture-iface"))) {
     sniffles::app::App app;
     return app.Run(argc, argv);
   }
 
-  if (list_ifaces) {
+  if (vm.count("list-ifaces")) {
     std::vector<sniffles::capture::DeviceInfo> devices;
     std::string error;
     if (!sniffles::capture::DeviceEnumerator::ListDevices(devices, error)) {
@@ -81,22 +64,30 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  if (capture_iface) {
+  if (vm.count("capture-iface")) {
+    std::string interface = vm["capture-iface"].as<std::string>();
+    std::string filter_expression;
+
+    if (vm.count("filter")) {
+      filter_expression = vm["filter"].as<std::string>();
+    }
+
     sniffles::capture::CaptureService capture_service;
     sniffles::capture::CaptureRequest request;
     request.device_name = interface;
     request.filter_expression = filter_expression;
+
     if (!capture_service.Start(request)) {
       std::cerr << "Failed to start capture on " << interface << "\n";
       return 1;
     }
 
-    std::cout << "Capturing on " << interface << "... Press Enter to stop .\n";
+    std::cout << "Capturing on " << interface << "... Press Enter to stop.\n";
     std::cin.get();
     capture_service.Stop();
     return 0;
   }
 
-  PrintHelp(argv[0]);
+  PrintHelp(desc);
   return 0;
 }

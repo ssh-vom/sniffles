@@ -7,6 +7,8 @@ set(CMAKE_AUTOMOC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 
+find_package(Boost REQUIRED COMPONENTS program_options)
+
 find_path(PCAPPLUSPLUS_INCLUDE_DIR
     NAMES PcapLiveDeviceList.h
     PATHS /opt/homebrew/opt/pcapplusplus/include/pcapplusplus /opt/homebrew/include/pcapplusplus /usr/local/include/pcapplusplus
@@ -55,6 +57,7 @@ target_include_directories(sniffles_core
     PUBLIC
         ${PROJECT_SOURCE_DIR}/src
         ${PCAPPLUSPLUS_INCLUDE_DIR}
+        ${Boost_INCLUDE_DIRS}
 )
 
 target_link_libraries(sniffles_core
@@ -65,6 +68,7 @@ target_link_libraries(sniffles_core
         ${PACKETPP_LIB}
         ${COMMONPP_LIB}
         ${PCAP_LIB}
+        Boost::program_options
 )
 
 if (APPLE)

@@ -1,35 +1,58 @@
 #pragma once
 
+#include <boost/lockfree/queue.hpp>
 #include <cstddef>
-#include <mutex>
-#include <queue>
+#include <memory>
+#include <optional>
 
 namespace sniffles::util {
+
 template <typename T>
 class ThreadSafeQueue {
 public:
+  explicit ThreadSafeQueue(std::size_t capacity = 10000)
+      : queue_(capacity) {}
+
   void Push(const T &value) {
-    std::lock_guard<std::mutex> lock(mutex_);
-    queue_.push(value);
+    T *pvalue = new T(value);
+    if (!queue_.push(pvalue)) {
+      delete pvalue;
+    }
+  }
+
+  void Push(T &&value) {
+    T *pvalue = new T(std::move(value));
+    if (!queue_.push(pvalue)) {
+      delete pvalue;
+    }
   }
 
   bool TryPop(T &out) {
-    std::lock_guard<std::mutex> lock(mutex_);
-    if (queue_.empty()) {
-      return false;
+    T *pvalue = nullptr;
+    if (queue_.pop(pvalue)) {
+      out = std::move(*pvalue);
+      delete pvalue;
+      return true;
     }
-    out = queue_.front();
-    queue_.pop();
-    return true;
+    return false;
   }
 
-  std::size_t Size() const {
-    std::lock_guard<std::mutex> lock(mutex_);
-    return queue_.size();
+  std::optional<T> TryPop() {
+    T *pvalue = nullptr;
+    if (queue_.pop(pvalue)) {
+      T value = std::move(*pvalue);
+      delete pvalue;
+      return value;
+    }
+    return std::nullopt;
   }
+
+  bool IsEmpty() const { return queue_.empty(); }
+
+  std::size_t Capacity() const { return queue_.capacity(); }
 
 private:
-  mutable std::mutex mutex_;
-  std::queue<T> queue_;
+  boost::lockfree::queue<T *> queue_;
 };
+
 } // namespace sniffles::util
