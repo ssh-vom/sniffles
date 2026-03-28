@@ -26,6 +26,8 @@ bool DeviceEnumerator::ListDevices(std::vector<DeviceInfo> &devices,
     DeviceInfo info;
     info.name = device->getName();
     info.description = device->getDesc();
+    info.ipv4_address = device->getIPv4Address().toString();
+    info.is_loopback = device->getLoopback();
     if (info.description.empty()) {
       info.description = "No description";
     }

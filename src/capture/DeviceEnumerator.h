@@ -7,6 +7,8 @@ namespace sniffles::capture {
 struct DeviceInfo {
   std::string name;
   std::string description;
+  std::string ipv4_address;
+  bool is_loopback = false;
 };
 
 class DeviceEnumerator {

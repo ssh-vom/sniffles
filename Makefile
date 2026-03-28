@@ -165,6 +165,132 @@ test_decode/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_decode.dir/build.make CMakeFiles/test_decode.dir/build
 .PHONY : test_decode/fast
 
+#=============================================================================
+# Target rules for targets named sniffles_core_autogen_timestamp_deps
+
+# Build rule for target.
+sniffles_core_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_core_autogen_timestamp_deps
+.PHONY : sniffles_core_autogen_timestamp_deps
+
+# fast build rule for target.
+sniffles_core_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_core_autogen_timestamp_deps.dir/build.make CMakeFiles/sniffles_core_autogen_timestamp_deps.dir/build
+.PHONY : sniffles_core_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_core_autogen
+
+# Build rule for target.
+sniffles_core_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_core_autogen
+.PHONY : sniffles_core_autogen
+
+# fast build rule for target.
+sniffles_core_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_core_autogen.dir/build.make CMakeFiles/sniffles_core_autogen.dir/build
+.PHONY : sniffles_core_autogen/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_autogen_timestamp_deps
+
+# Build rule for target.
+sniffles_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_autogen_timestamp_deps
+.PHONY : sniffles_autogen_timestamp_deps
+
+# fast build rule for target.
+sniffles_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_autogen_timestamp_deps.dir/build.make CMakeFiles/sniffles_autogen_timestamp_deps.dir/build
+.PHONY : sniffles_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named sniffles_autogen
+
+# Build rule for target.
+sniffles_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sniffles_autogen
+.PHONY : sniffles_autogen
+
+# fast build rule for target.
+sniffles_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_autogen.dir/build.make CMakeFiles/sniffles_autogen.dir/build
+.PHONY : sniffles_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_decode_autogen_timestamp_deps
+
+# Build rule for target.
+test_decode_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_decode_autogen_timestamp_deps
+.PHONY : test_decode_autogen_timestamp_deps
+
+# fast build rule for target.
+test_decode_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_decode_autogen_timestamp_deps.dir/build.make CMakeFiles/test_decode_autogen_timestamp_deps.dir/build
+.PHONY : test_decode_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_decode_autogen
+
+# Build rule for target.
+test_decode_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_decode_autogen
+.PHONY : test_decode_autogen
+
+# fast build rule for target.
+test_decode_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_decode_autogen.dir/build.make CMakeFiles/test_decode_autogen.dir/build
+.PHONY : test_decode_autogen/fast
+
+sniffles_autogen/mocs_compilation.o: sniffles_autogen/mocs_compilation.cpp.o
+.PHONY : sniffles_autogen/mocs_compilation.o
+
+# target to build an object file
+sniffles_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.o
+.PHONY : sniffles_autogen/mocs_compilation.cpp.o
+
+sniffles_autogen/mocs_compilation.i: sniffles_autogen/mocs_compilation.cpp.i
+.PHONY : sniffles_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+sniffles_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.i
+.PHONY : sniffles_autogen/mocs_compilation.cpp.i
+
+sniffles_autogen/mocs_compilation.s: sniffles_autogen/mocs_compilation.cpp.s
+.PHONY : sniffles_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+sniffles_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles.dir/build.make CMakeFiles/sniffles.dir/sniffles_autogen/mocs_compilation.cpp.s
+.PHONY : sniffles_autogen/mocs_compilation.cpp.s
+
+sniffles_core_autogen/mocs_compilation.o: sniffles_core_autogen/mocs_compilation.cpp.o
+.PHONY : sniffles_core_autogen/mocs_compilation.o
+
+# target to build an object file
+sniffles_core_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_core.dir/build.make CMakeFiles/sniffles_core.dir/sniffles_core_autogen/mocs_compilation.cpp.o
+.PHONY : sniffles_core_autogen/mocs_compilation.cpp.o
+
+sniffles_core_autogen/mocs_compilation.i: sniffles_core_autogen/mocs_compilation.cpp.i
+.PHONY : sniffles_core_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+sniffles_core_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_core.dir/build.make CMakeFiles/sniffles_core.dir/sniffles_core_autogen/mocs_compilation.cpp.i
+.PHONY : sniffles_core_autogen/mocs_compilation.cpp.i
+
+sniffles_core_autogen/mocs_compilation.s: sniffles_core_autogen/mocs_compilation.cpp.s
+.PHONY : sniffles_core_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+sniffles_core_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_core.dir/build.make CMakeFiles/sniffles_core.dir/sniffles_core_autogen/mocs_compilation.cpp.s
+.PHONY : sniffles_core_autogen/mocs_compilation.cpp.s
+
 src/app/App.o: src/app/App.cpp.o
 .PHONY : src/app/App.o
 
@@ -429,6 +555,30 @@ src/util/Time.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sniffles_core.dir/build.make CMakeFiles/sniffles_core.dir/src/util/Time.cpp.s
 .PHONY : src/util/Time.cpp.s
 
+test_decode_autogen/mocs_compilation.o: test_decode_autogen/mocs_compilation.cpp.o
+.PHONY : test_decode_autogen/mocs_compilation.o
+
+# target to build an object file
+test_decode_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_decode.dir/build.make CMakeFiles/test_decode.dir/test_decode_autogen/mocs_compilation.cpp.o
+.PHONY : test_decode_autogen/mocs_compilation.cpp.o
+
+test_decode_autogen/mocs_compilation.i: test_decode_autogen/mocs_compilation.cpp.i
+.PHONY : test_decode_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_decode_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_decode.dir/build.make CMakeFiles/test_decode.dir/test_decode_autogen/mocs_compilation.cpp.i
+.PHONY : test_decode_autogen/mocs_compilation.cpp.i
+
+test_decode_autogen/mocs_compilation.s: test_decode_autogen/mocs_compilation.cpp.s
+.PHONY : test_decode_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_decode_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_decode.dir/build.make CMakeFiles/test_decode.dir/test_decode_autogen/mocs_compilation.cpp.s
+.PHONY : test_decode_autogen/mocs_compilation.cpp.s
+
 tests/test_decode.o: tests/test_decode.cpp.o
 .PHONY : tests/test_decode.o
 
@@ -462,9 +612,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... sniffles_autogen"
+	@echo "... sniffles_autogen_timestamp_deps"
+	@echo "... sniffles_core_autogen"
+	@echo "... sniffles_core_autogen_timestamp_deps"
+	@echo "... test_decode_autogen"
+	@echo "... test_decode_autogen_timestamp_deps"
 	@echo "... sniffles"
 	@echo "... sniffles_core"
 	@echo "... test_decode"
+	@echo "... sniffles_autogen/mocs_compilation.o"
+	@echo "... sniffles_autogen/mocs_compilation.i"
+	@echo "... sniffles_autogen/mocs_compilation.s"
+	@echo "... sniffles_core_autogen/mocs_compilation.o"
+	@echo "... sniffles_core_autogen/mocs_compilation.i"
+	@echo "... sniffles_core_autogen/mocs_compilation.s"
 	@echo "... src/app/App.o"
 	@echo "... src/app/App.i"
 	@echo "... src/app/App.s"
@@ -498,6 +660,9 @@ help:
 	@echo "... src/util/Time.o"
 	@echo "... src/util/Time.i"
 	@echo "... src/util/Time.s"
+	@echo "... test_decode_autogen/mocs_compilation.o"
+	@echo "... test_decode_autogen/mocs_compilation.i"
+	@echo "... test_decode_autogen/mocs_compilation.s"
 	@echo "... tests/test_decode.o"
 	@echo "... tests/test_decode.i"
 	@echo "... tests/test_decode.s"

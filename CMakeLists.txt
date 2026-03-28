@@ -3,8 +3,9 @@ project(sniffles LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTOMOC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 
 find_path(PCAPPLUSPLUS_INCLUDE_DIR
     NAMES PcapLiveDeviceList.h
@@ -59,6 +60,7 @@ target_include_directories(sniffles_core
 target_link_libraries(sniffles_core
     PUBLIC
         Qt6::Core
+        Qt6::Widgets
         ${PCAPPLUSPLUS_LIB}
         ${PACKETPP_LIB}
         ${COMMONPP_LIB}

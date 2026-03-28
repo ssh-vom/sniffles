@@ -2,17 +2,21 @@
 #include <string>
 #include <vector>
 
+#include "app/App.h"
 #include "capture/CaptureService.h"
 #include "capture/DeviceEnumerator.h"
 
 namespace {
 void PrintHelp(const char *program) {
   std::cout << "sniffles - packet sniffer CLI\n\n"
-            << "Usage: " << program << " [--help] [--list-ifaces]\n\n"
+            << "Usage: " << program
+            << " [--help] [--list-ifaces] [--capture-iface <name>] [--filter <expr>]\n\n"
             << "Options:\n"
             << "  --help        Show this help message\n"
             << "  --list-ifaces List capture interfaces\n"
-            << "  --capture-iface Capture from a given interface \n";
+            << "  --capture-iface Capture from a given interface\n"
+            << "  --filter      Apply a BPF filter to capture\n"
+            << "\nRun with no options to open the UI.\n";
 }
 } // namespace
 
@@ -22,6 +26,7 @@ int main(int argc, char *argv[]) {
   std::string interface;
   bool list_ifaces = false;
   bool capture_iface = false;
+  std::string filter_expression;
   std::string unknown_option;
 
   for (size_t i = 0; i < args.size(); ++i) {
@@ -35,7 +40,14 @@ int main(int argc, char *argv[]) {
         return 1;
       }
       interface = args[i + 1];
-      break;
+      ++i;
+    } else if (arg == "--filter") {
+      if (i + 1 >= args.size()) {
+        std::cerr << "Error: --filter requires an expression\n";
+        return 1;
+      }
+      filter_expression = args[i + 1];
+      ++i;
     } else if (arg == "--help" || arg == "-h") {
       continue;
     } else {
@@ -48,6 +60,11 @@ int main(int argc, char *argv[]) {
     std::cerr << "Unknown option: " << unknown_option << "\n";
     PrintHelp(argv[0]);
     return 2;
+  }
+
+  if (args.empty()) {
+    sniffles::app::App app;
+    return app.Run(argc, argv);
   }
 
   if (list_ifaces) {
@@ -66,7 +83,10 @@ int main(int argc, char *argv[]) {
 
   if (capture_iface) {
     sniffles::capture::CaptureService capture_service;
-    if (!capture_service.Start(interface)) {
+    sniffles::capture::CaptureRequest request;
+    request.device_name = interface;
+    request.filter_expression = filter_expression;
+    if (!capture_service.Start(request)) {
       std::cerr << "Failed to start capture on " << interface << "\n";
       return 1;
     }
